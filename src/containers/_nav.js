@@ -7,49 +7,80 @@ export default [
         name: 'Dashboard',
         to: '/dashboard',
         icon: 'cil-speedometer',
-        badge: {
-          color: 'primary',
-          text: 'NEW'
-        }
+        // badge: {
+        //   color: 'primary',
+        //   text: 'NEW'
+        // }
       },
       {
         _name: 'CSidebarNavTitle',
-        _children: ['Theme']
+        _children: ['Withdraw money']
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Colors',
+        name: 'Authorization to withdraw',
         to: '/theme/colors',
-        icon: 'cil-drop'
+        icon: 'cil-dollar'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Typography',
+        name: 'Automatic transfer waiting list',
         to: '/theme/typography',
-        icon: 'cil-pencil'
+        icon: 'cil-dollar'
       },
       {
+        _name: 'CSidebarNavItem',
+        name: 'Error list, automatic transfer',
+        to: '/theme/typography',
+        icon: 'cil-dollar'
+      },
+
+      {
         _name: 'CSidebarNavTitle',
-        _children: ['Components']
+        _children: ['Set Up']
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'System Setting',
+        to: '/charts',
+        icon: 'cil-settings'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Set up withdrawal',
+        to: '/charts',
+        icon: 'cil-settings'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Set site colors and backgrounds',
+        to: '/charts',
+        icon: 'cil-settings'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Set up a membership page',
+        to: '/charts',
+        icon: 'cil-settings'
       },
       {
         _name: 'CSidebarNavDropdown',
-        name: 'Base',
+        name: 'The staff',
         route: '/base',
-        icon: 'cil-puzzle',
+        icon: 'cil-people',
         items: [
           {
-            name: 'Breadcrumbs',
+            name: 'Employee list',
             to: '/base/breadcrumbs'
           },
           {
-            name: 'Cards',
+            name: 'Add staff',
             to: '/base/cards'
           },
           {
             name: 'Carousels',
             to: '/base/carousels'
-          }, 
+          },
           {
             name: 'Collapses',
             to: '/base/collapses'
@@ -105,10 +136,22 @@ export default [
         ]
       },
       {
+        _name: 'CSidebarNavItem',
+        name: 'Bank deposit / withdraw money',
+        to: '/charts',
+        icon: 'cil-basket'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'True Wallet Deposit',
+        to: '/charts',
+        icon: 'cil-pencil'
+      },
+      {
         _name: 'CSidebarNavDropdown',
-        name: 'Buttons',
+        name: 'Promotion',
         route: '/buttons',
-        icon: 'cil-cursor',
+        icon: 'cil-star',
         items: [
           {
             name: 'Buttons',
@@ -130,15 +173,25 @@ export default [
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Charts',
+        name: 'Affiliate',
         to: '/charts',
-        icon: 'cil-chart-pie'
+        icon: 'cil-user'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Alert',
+        to: '/charts',
+        icon: 'cil-bell'
+      },
+      {
+        _name: 'CSidebarNavTitle',
+        _children: ['Report']
       },
       {
         _name: 'CSidebarNavDropdown',
-        name: 'Icons',
+        name: 'Deposit / Withdraw / Transfer',
         route: '/icons',
-        icon: 'cil-star',
+        icon: 'cil-layers',
         items: [
           {
             name: 'CoreUI Icons',
@@ -160,9 +213,9 @@ export default [
       },
       {
         _name: 'CSidebarNavDropdown',
-        name: 'Notifications',
+        name: 'Summary Report',
         route: '/notifications',
-        icon: 'cil-bell',
+        icon: 'cil-layers',
         items: [
           {
             name: 'Alerts',
@@ -180,14 +233,15 @@ export default [
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Widgets',
-        to: '/widgets',
-        icon: 'cil-calculator',
-        badge: {
-          color: 'primary',
-          text: 'NEW',
-          shape: 'pill'
-        }
+        name: 'Affiliate Report',
+        to: '/charts',
+        icon: 'cil-layers'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Money transfer report',
+        to: '/charts',
+        icon: 'cil-layers'
       },
       {
         _name: 'CSidebarNavDivider',
@@ -195,48 +249,46 @@ export default [
       },
       {
         _name: 'CSidebarNavTitle',
-        _children: ['Extras']
-      },
-      {
-        _name: 'CSidebarNavDropdown',
-        name: 'Pages',
-        route: '/pages',
-        icon: 'cil-star',
-        items: [
-          {
-            name: 'Login',
-            to: '/pages/login'
-          },
-          {
-            name: 'Register',
-            to: '/pages/register'
-          },
-          {
-            name: 'Error 404',
-            to: '/pages/404'
-          },
-          {
-            name: 'Error 500',
-            to: '/pages/500'
-          }
-        ]
+        _children: ['Various history']
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Download CoreUI',
-        href: 'http://coreui.io/vue/',
-        icon: { name: 'cil-cloud-download', class: 'text-white' },
-        _class: 'bg-success text-white',
-        target: '_blank'
+        name: 'Making a list of admins',
+        to: '/charts',
+        icon: 'cil-cloud-download'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Try CoreUI PRO',
-        href: 'http://coreui.io/pro/vue/',
-        icon: { name: 'cil-layers', class: 'text-white' },
-        _class: 'bg-danger text-white',
-        target: '_blank'
-      }
+        name: 'Account List',
+        to: '/charts',
+        icon: 'cil-cloud-download'
+      },
+      {
+        _name: 'CSidebarNavTitle',
+        _children: ['Member']
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Add members (old / new one)',
+        to: '/charts',
+        icon: 'cil-user-follow'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Manage members',
+        to: '/charts',
+        icon: 'cil-settings'
+      },
+      {
+        _name: 'CSidebarNavTitle',
+        _children: ['Manage Server']
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Agent system',
+        to: '/charts',
+        icon: 'cil-layers'
+      },
     ]
   }
 ]
