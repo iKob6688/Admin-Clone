@@ -36,7 +36,6 @@
         <CDataTable
           :items="items"
           :fields="fields"
-          column-filter
           table-filter
           items-per-page-select
           :items-per-page="5"
@@ -97,18 +96,20 @@ export default {
         "1 years ago"
       ],
       items: [],
-      fields: [
-        { key: "username", _style: "width:40%" },
-        "registered",
-        { key: "role", _style: "width:20%;" },
-        { key: "status", _style: "width:20%;" },
-        {
-          key: "show_details",
-          label: "",
-          _style: "width:1%",
-          sorter: false,
-          filter: false
-        }
+       fields: [
+        'User',
+        'User Name',
+        'Amount of money',
+        'Status',
+        'Maximum withdrawal',
+        'Credit bfore withdrawal',
+        'Credit after withdrawal',
+        'Balance before withdrawal',
+        'Balance after withdrawal',
+        'All bonuses',
+        'Account Number',
+        'Start time to turn',
+        'Withdrawal date',
       ]
     };
   }
