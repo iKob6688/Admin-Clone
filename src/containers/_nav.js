@@ -19,19 +19,19 @@ export default [
       {
         _name: 'CSidebarNavItem',
         name: 'Authorization to withdraw',
-        to: '/theme/colors',
+        to: '/withdraw/manual',
         icon: 'cil-dollar'
       },
       {
         _name: 'CSidebarNavItem',
         name: 'Automatic transfer waiting list',
-        to: '/theme/typography',
+        to: '/withdraw/auto',
         icon: 'cil-dollar'
       },
       {
         _name: 'CSidebarNavItem',
         name: 'Error list, automatic transfer',
-        to: '/theme/typography',
+        to: '/withdraw/error',
         icon: 'cil-dollar'
       },
 
@@ -42,13 +42,13 @@ export default [
       {
         _name: 'CSidebarNavItem',
         name: 'System Setting',
-        to: '/charts',
+        to: '/theme/colors',
         icon: 'cil-settings'
       },
       {
         _name: 'CSidebarNavItem',
         name: 'Set up withdrawal',
-        to: '/charts',
+        to: '/theme/typography',
         icon: 'cil-settings'
       },
       {

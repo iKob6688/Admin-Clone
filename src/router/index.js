@@ -7,7 +7,7 @@ const TheContainer = () => import('@/containers/TheContainer')
 // Views
 const Dashboard = () => import('@/views/Dashboard')
 
-const Colors = () => import('@/views/theme/Colors')
+const Colors = () => import('@/views/theme/ColorView')
 const Typography = () => import('@/views/theme/Typography')
 
 const Charts = () => import('@/views/charts/Charts')
@@ -57,6 +57,12 @@ const Register = () => import('@/views/pages/Register')
 const Users = () => import('@/views/users/Users')
 const User = () => import('@/views/users/User')
 
+// skw
+
+const ManualWithdraw = () =>  import('@/views/withdraw/Manual')
+const AutoWithdraw = () =>  import('@/views/withdraw/Auto')
+const EorrorWithdraw = () =>  import('@/views/withdraw/Error')
+
 Vue.use(Router)
 
 export default new Router({
@@ -66,7 +72,7 @@ export default new Router({
   routes: configRoutes()
 })
 
-function configRoutes () {
+function configRoutes() {
   return [
     {
       path: '/',
@@ -80,11 +86,36 @@ function configRoutes () {
           component: Dashboard
         },
         {
+          path: 'withdraw',
+          redirect: '/withdraw/manual',
+          name: 'Withdraw',
+          component: {
+            render(c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'manual',
+              name: 'Manual',
+              component: ManualWithdraw
+            },
+            {
+              path: 'auto',
+              name: 'Auto',
+              component: AutoWithdraw
+            },
+            {
+              path: 'error',
+              name: 'Error',
+              component: EorrorWithdraw
+            }
+          ]
+        },
+        {
           path: 'theme',
           redirect: '/theme/colors',
           name: 'Theme',
           component: {
-            render (c) { return c('router-view') }
+            render(c) { return c('router-view') }
           },
           children: [
             {
@@ -140,7 +171,7 @@ function configRoutes () {
           redirect: '/base/cards',
           name: 'Base',
           component: {
-            render (c) { return c('router-view') }
+            render(c) { return c('router-view') }
           },
           children: [
             {
@@ -230,7 +261,7 @@ function configRoutes () {
           redirect: '/buttons/standard-buttons',
           name: 'Buttons',
           component: {
-            render (c) { return c('router-view') }
+            render(c) { return c('router-view') }
           },
           children: [
             {
@@ -260,7 +291,7 @@ function configRoutes () {
           redirect: '/icons/coreui-icons',
           name: 'CoreUI Icons',
           component: {
-            render (c) { return c('router-view') }
+            render(c) { return c('router-view') }
           },
           children: [
             {
@@ -285,7 +316,7 @@ function configRoutes () {
           redirect: '/notifications/alerts',
           name: 'Notifications',
           component: {
-            render (c) { return c('router-view') }
+            render(c) { return c('router-view') }
           },
           children: [
             {
@@ -312,7 +343,7 @@ function configRoutes () {
       redirect: '/pages/404',
       name: 'Pages',
       component: {
-        render (c) { return c('router-view') }
+        render(c) { return c('router-view') }
       },
       children: [
         {
