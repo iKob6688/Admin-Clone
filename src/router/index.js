@@ -57,11 +57,16 @@ const Register = () => import('@/views/pages/Register')
 const Users = () => import('@/views/users/Users')
 const User = () => import('@/views/users/User')
 
-// skw
+//---------------------------- skw ------------------------------- //
 
+// withdraw
 const ManualWithdraw = () =>  import('@/views/withdraw/Manual')
 const AutoWithdraw = () =>  import('@/views/withdraw/Auto')
 const EorrorWithdraw = () =>  import('@/views/withdraw/Error')
+
+// settings
+const Customer = () => import('@/views/settings/Customer')
+
 
 Vue.use(Router)
 
@@ -106,6 +111,36 @@ function configRoutes() {
             {
               path: 'error',
               name: 'Error',
+              component: EorrorWithdraw
+            }
+          ]
+        },
+        {
+          path: 'settings',
+          redirect: '/settings/customer',
+          name: 'Settings',
+          component: {
+            render(c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'customer',
+              name: 'Customer',
+              component: Customer
+            },
+            {
+              path: 'transfer-withdraw',
+              name: 'Transfer Withdraw',
+              component: AutoWithdraw
+            },
+            {
+              path: 'styles',
+              name: 'Style',
+              component: EorrorWithdraw
+            },
+            {
+              path: 'register',
+              name: 'Register',
               component: EorrorWithdraw
             }
           ]

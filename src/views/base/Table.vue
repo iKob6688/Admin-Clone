@@ -18,9 +18,14 @@
         :dark="dark"
         pagination
       >
-        <template #status="{item}">
+       <template #image="{item}">
+         <td>
+           <img :src="item.image" alt="img" width="50px">
+         </td>
+       </template>
+        <template #action="{item}">
           <td>
-            <CBadge :color="getBadge(item.status)">{{item.status}}</CBadge>
+            <CButton block color="danger" @click="item.action">Delete</CButton>
           </td>
         </template>
       </CDataTable>

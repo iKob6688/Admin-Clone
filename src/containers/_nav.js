@@ -42,25 +42,25 @@ export default [
       {
         _name: 'CSidebarNavItem',
         name: 'System Setting',
-        to: '/theme/colors',
+        to: '/settings/customer',
         icon: 'cil-settings'
       },
       {
         _name: 'CSidebarNavItem',
         name: 'Set up withdrawal',
-        to: '/theme/typography',
+        to: '/settings/transfer-withdraw',
         icon: 'cil-settings'
       },
       {
         _name: 'CSidebarNavItem',
         name: 'Set site colors and backgrounds',
-        to: '/charts',
+        to: '/settings/styles',
         icon: 'cil-settings'
       },
       {
         _name: 'CSidebarNavItem',
         name: 'Set up a membership page',
-        to: '/charts',
+        to: '/settings/register',
         icon: 'cil-settings'
       },
       {
