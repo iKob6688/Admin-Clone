@@ -68,6 +68,7 @@ const EorrorWithdraw = () =>  import('@/views/withdraw/Error')
 const Customer = () => import('@/views/settings/Customer')
 const TransferWithdraw = () => import('@/views/settings/transfer-withdraw')
 const WebSiteStyle = () => import('@/views/settings/style')
+const MembershipPlan = () => import('@/views/settings/register')
 
 
 Vue.use(Router)
@@ -142,8 +143,8 @@ function configRoutes() {
             },
             {
               path: 'register',
-              name: 'Register',
-              component: EorrorWithdraw
+              name: 'Membership Plan',
+              component: MembershipPlan
             }
           ]
         },
