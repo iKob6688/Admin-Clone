@@ -75,7 +75,7 @@
                     />
                   </CCol>
                 </CRow>
-                <CButton block color="success">Record</CButton>
+                <CButton color="success">Record</CButton>
               </div>
             </div>
           </div>
