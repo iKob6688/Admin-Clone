@@ -67,6 +67,7 @@ const EorrorWithdraw = () =>  import('@/views/withdraw/Error')
 // settings
 const Customer = () => import('@/views/settings/Customer')
 const TransferWithdraw = () => import('@/views/settings/transfer-withdraw')
+const WebSiteStyle = () => import('@/views/settings/style')
 
 
 Vue.use(Router)
@@ -137,7 +138,7 @@ function configRoutes() {
             {
               path: 'styles',
               name: 'Style',
-              component: EorrorWithdraw
+              component: WebSiteStyle
             },
             {
               path: 'register',

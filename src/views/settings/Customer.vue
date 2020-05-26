@@ -71,7 +71,7 @@
                       :items="images"
                       :fields="fields"
                       striped
-                      caption="Striped Table"
+                      caption="Logo List"
                     />
                   </CCol>
                 </CRow>

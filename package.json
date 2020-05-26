@@ -34,6 +34,7 @@
     "@coreui/vue": "^3.0.6",
     "@coreui/vue-chartjs": "^1.0.5",
     "vue": "~2.6.11",
+    "vue-color": "^2.7.1",
     "vue-router": "~3.1.6",
     "vue2-datepicker": "^3.5.0",
     "vuex": "~3.1.3"

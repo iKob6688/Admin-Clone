@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: "Customer",
+  name: "Transfer Withdraw",
   data() {
     return {
       data: {
