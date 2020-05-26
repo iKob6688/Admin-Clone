@@ -145,6 +145,26 @@ function configRoutes() {
               path: 'register',
               name: 'Membership Plan',
               component: MembershipPlan
+            },
+            {
+              path: 'staff',
+              redirect: '/staff/list',
+              name: 'Staff',
+              component: {
+                render(c) { return c('router-view') }
+              },
+              children: [
+                {
+                  path: 'list',
+                  name: 'Staff List',
+                  component: WebSiteStyle
+                },
+                {
+                  path: 'add',
+                  name: 'Add Staff',
+                  component: MembershipPlan
+                }
+              ]
             }
           ]
         },

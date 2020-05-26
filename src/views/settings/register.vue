@@ -4,11 +4,6 @@
       <h5>Set up a membership system</h5>
     </CCardHeader>
     <CCardBody>
-      <!-- <CInput label="Add more ways" description="Please enter Plan to add" custom>
-        <template #append>
-          <CButton color="primary" @click="add">Add</CButton>
-        </template>
-      </CInput>-->
       <div>
         <label class="typo__label">Select more ways</label>
         <multiselect
@@ -43,12 +38,12 @@ export default {
     return {
       value: [],
       options: [
-        { name: "Facebook", key: "JavaScript" },
-        { name: "Linkedin", key: "JavaScript" },
-        { name: "Youtube", key: "Ruby" },
-        { name: "Twitter", key: "Ruby" },
-        { name: "VK", key: "PHP" },
-        { name: "Freelancer", key: "Elixir" }
+        { name: "Facebook", key: "fb" },
+        { name: "Linkedin", key: "in" },
+        { name: "Youtube", key: "youtube" },
+        { name: "Twitter", key: "tw" },
+        { name: "VK", key: "vk" },
+        { name: "Freelancer", key: "fl" }
       ]
     };
   }
